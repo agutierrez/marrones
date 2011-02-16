@@ -1,57 +1,57 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Received at:</b>
+  <b>Recibido:</b>
   <%= @marron.received_at %>
 </p>
 
 <p>
-  <b>Delivered at:</b>
+  <b>Entregado:</b>
   <%= @marron.delivered_at %>
 </p>
 
 <p>
-  <b>Label:</b>
+  <b>Etiqueta:</b>
   <%= @marron.label %>
 </p>
 
 <p>
-  <b>Phone1:</b>
+  <b>Tel-1:</b>
   <%= @marron.phone1 %>
 </p>
 
 <p>
-  <b>Phone2:</b>
+  <b>Tel-2:</b>
   <%= @marron.phone2 %>
 </p>
 
 <p>
-  <b>Status:</b>
-  <%= @marron.status_id %>
+  <b>Estado:</b>
+  <%= Status.find_by_status_id(@marron.status_id).name %>
 </p>
 
 <p>
-  <b>Technician:</b>
-  <%= Technician.find_by_technician_id(2).name %>
+  <b>Técnico:</b>
+  <%= Technician.find_by_technician_id(@marron.technician_id).name if @marron.technician_id %>
 </p>
 
 <p>
-  <b>Informed:</b>
+  <b>Avisado:</b>
   <%= @marron.informed %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b>Descripción:</b>
   <%= @marron.description %>
 </p>
 
 <p>
-  <b>Actions:</b>
+  <b>Servicio realizado:</b>
   <%= @marron.actions %>
 </p>
 
 <p>
-  <b>Advise:</b>
+  <b>Observaciones:</b>
   <%= @marron.advise %>
 </p>
 
