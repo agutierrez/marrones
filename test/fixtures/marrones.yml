@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  received_at: 2011-02-16 16:27:25
+  delivered_at: 2011-02-16 16:27:25
+  lavel: MyString
+  phone1: MyString
+  phone2: MyString
+  status_id: 1
+  technician_id: 1
+  informed: false
+  description: MyText
+  actions: MyText
+  advise: MyText
+
+two:
+  received_at: 2011-02-16 16:27:25
+  delivered_at: 2011-02-16 16:27:25
+  lavel: MyString
+  phone1: MyString
+  phone2: MyString
+  status_id: 1
+  technician_id: 1
+  informed: false
+  description: MyText
+  actions: MyText
+  advise: MyText

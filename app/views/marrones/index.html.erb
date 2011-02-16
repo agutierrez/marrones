@@ -1,0 +1,43 @@
+<h1>Listing marrones</h1>
+
+<table>
+  <tr>
+    <th>Received at</th>
+    <th>Delivered at</th>
+    <th>Label</th>
+    <th>Phone1</th>
+    <th>Phone2</th>
+    <th>Status</th>
+    <th>Technician</th>
+    <th>Informed</th>
+    <th>Description</th>
+    <th>Actions</th>
+    <th>Advise</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @marrones.each do |marron| %>
+  <tr>
+    <td><%= marron.received_at %></td>
+    <td><%= marron.delivered_at %></td>
+    <td><%= marron.label %></td>
+    <td><%= marron.phone1 %></td>
+    <td><%= marron.phone2 %></td>
+    <td><%= marron.status_id %></td>
+    <td><%= marron.technician_id %></td>
+    <td><%= marron.informed %></td>
+    <td><%= marron.description %></td>
+    <td><%= marron.actions %></td>
+    <td><%= marron.advise %></td>
+    <td><%= link_to 'Show', marron %></td>
+    <td><%= link_to 'Edit', edit_marron_path(marron) %></td>
+    <td><%= link_to 'Destroy', marron, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Marron', new_marron_path %>

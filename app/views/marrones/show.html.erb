@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Received at:</b>
+  <%= @marron.received_at %>
+</p>
+
+<p>
+  <b>Delivered at:</b>
+  <%= @marron.delivered_at %>
+</p>
+
+<p>
+  <b>Label:</b>
+  <%= @marron.label %>
+</p>
+
+<p>
+  <b>Phone1:</b>
+  <%= @marron.phone1 %>
+</p>
+
+<p>
+  <b>Phone2:</b>
+  <%= @marron.phone2 %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @marron.status_id %>
+</p>
+
+<p>
+  <b>Technician:</b>
+  <%= Technician.find_by_technician_id(2).name %>
+</p>
+
+<p>
+  <b>Informed:</b>
+  <%= @marron.informed %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @marron.description %>
+</p>
+
+<p>
+  <b>Actions:</b>
+  <%= @marron.actions %>
+</p>
+
+<p>
+  <b>Advise:</b>
+  <%= @marron.advise %>
+</p>
+
+
+<%= link_to 'Edit', edit_marron_path(@marron) %> |
+<%= link_to 'Back', marrones_path %>

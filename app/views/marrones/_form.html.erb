@@ -1,0 +1,61 @@
+<%= form_for(@marron) do |f| %>
+  <% if @marron.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@marron.errors.count, "error") %> prohibited this marron from being saved:</h2>
+
+      <ul>
+      <% @marron.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :received_at %><br />
+    <%= f.datetime_select :received_at %>
+  </div>
+  <div class="field">
+    <%= f.label :delivered_at %><br />
+    <%= f.datetime_select :delivered_at %>
+  </div>
+  <div class="field">
+    <%= f.label :label %><br />
+    <%= f.text_field :label %>
+  </div>
+  <div class="field">
+    <%= f.label :phone1 %><br />
+    <%= f.text_field :phone1 %>
+  </div>
+  <div class="field">
+    <%= f.label :phone2 %><br />
+    <%= f.text_field :phone2 %>
+  </div>
+  <div class="field">
+    <%= f.label :status_id %><br />
+    <%= f.text_field :status_id %>
+  </div>
+  <div class="field">
+    <%= f.label :technician_id %><br />
+    <%= f.text_field :technician_id %>
+  </div>
+  <div class="field">
+    <%= f.label :informed %><br />
+    <%= f.check_box :informed %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :actions %><br />
+    <%= f.text_area :actions %>
+  </div>
+  <div class="field">
+    <%= f.label :advise %><br />
+    <%= f.text_area :advise %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
